@@ -127,7 +127,7 @@ li a:hover {
 }
 
 .main1 {
-    height: 1500px;
+    height: 3000px;
     width: 1062px;
     grid-area: mainArea;
     margin: 0 auto;
@@ -229,36 +229,41 @@ footer {
         "emailP profile1"
         "numberP profile2";
 
-    grid-row-gap:20px;
+    grid-row-gap: 20px;
 
 }
 
+#profileImage {
+    width: 30%;
+    border-radius: 50%;
+}
+
 input.profile1,
-input.profile2{
+input.profile2 {
     width: auto;
 
     font-size: 15px;
 }
 
-#numberP{
+#numberP {
     grid-area: numberP;
     text-align: left;
 }
 
-#emailP{
+#emailP {
     grid-area: emailP;
     text-align: left;
 }
 
-.profile1{
+.profile1 {
     grid-area: profile1;
 }
 
-.profile2{
+.profile2 {
     grid-area: profile2;
 }
 
-#analytics{
+#analytics {
     width: 70%;
     height: 10vh;
     text-align: center;
@@ -275,9 +280,78 @@ input.profile2{
 
 /*-----------------------------------------------------------------------------------------*/
 
-/*MATERIAL PAGE----------------------------------------------------------------------------*/
+/*ANALYTICS PAGE----------------------------------------------------------------------------*/
 
+.statImage {
+    width: 30vw;
+    grid-area: statImage;
 
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.statText {
+    grid-area: statText;
+
+    text-align: left;
+
+    font-size: 25px;
+
+}
+
+.pieStat {
+    display: grid;
+    grid-column: 3fr 1fr;
+    grid-template-areas:
+        "statImage statText";
+
+    grid-row-gap: 0px;
+
+    align-items: center;
+    display: flex;
+}
+
+#graph1{
+    width: 90%;
+}
+
+.submission {
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+        "subText subNumber";
+
+    grid-row-gap: 0px;
+
+    align-items: center;
+    display: flex;
+}
+
+#submissions {
+    width: 50%;
+    margin: auto;
+
+    line-height: 10px;
+    font-size: 20px;
+
+}
+
+.subText {
+    grid-area: subText;
+}
+
+.subNumber {
+    grid-area: subNumber;
+}
+
+#number2{
+    color: green;
+}
+
+#number3{
+    color: red;
+}
 
 /*-----------------------------------------------------------------------------------------*/
 
