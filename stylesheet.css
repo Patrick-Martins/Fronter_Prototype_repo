@@ -164,14 +164,64 @@ footer {
     grid-template-areas:
         "newsImage newsText";
     grid-gap: 0;
+
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gainsboro;
 }
 
 .newsImage {
     grid-area: newsImage;
+    border-right-style: solid;
+    border-width: 2px;
 }
 
 .newsText {
     grid-area: newsText;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#indexMainHeader{
+    grid-area: indexMainHeader;
+
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+        "todayHeader arrowBottom";
+    grid-gap: 0px;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#mainHeaderDiv{
+    width: 95%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        ". indexMainHeader filter";
+    grid-gap: 0px;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#todayHeader{
+   grid-area:  todayHeader;
+}
+
+#filter{
+    grid-area: filter;
+    text-align: right;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -312,7 +362,7 @@ input.profile2 {
     display: flex;
 }
 
-#graph1{
+#graph1 {
     width: 90%;
 }
 
@@ -345,13 +395,88 @@ input.profile2 {
     grid-area: subNumber;
 }
 
-#number2{
+#number2 {
     color: green;
 }
 
-#number3{
+#number3 {
     color: red;
 }
+
+/*-----------------------------------------------------------------------------------------*/
+
+/*MATERIAL PAGE----------------------------------------------------------------------------*/
+
+.title1{
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+        "materialHeader arrowBottom";
+    grid-gap: 0px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.title2{
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+        "arrowBottom materialHeader";
+    grid-gap: 0px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#materialHeader{
+    grid-area: materialHeader;
+}
+
+#arrowBottom{
+    grid-area: arrowBottom;
+    margin:10px;
+}
+
+#submissionMat{
+    width: 95%;
+    background-color: black;
+    color: white;
+
+}
+
+.Themes{
+    width: 85%;
+    height: 10vh;
+    text-align: center;
+    background-color: #EA5045;
+    color: white;
+    margin: auto;
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    font-weight: 50;
+
+    display: grid;
+    grid-column: 1fr;
+    grid-template-areas:
+        "themesText";
+    grid-gap: 0px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.themesText{
+    grid-area: themesText;
+}
+
+#basicWEB{
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
+
 
 /*-----------------------------------------------------------------------------------------*/
 
