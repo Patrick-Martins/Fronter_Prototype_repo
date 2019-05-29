@@ -1,0 +1,300 @@
+body {
+    margin: 0;
+    /*
+    display: grid;
+    grid-column: 1fr;
+    grid-template-areas:
+        "headerArea"
+        "mainArea"
+        "foot";
+    grid-gap: 0;
+*/
+}
+
+
+div {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+
+
+header {
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    grid-area: headerArea;
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+#headSpace {
+    grid-area: headSpace;
+    width: 1062px;
+    margin: 0 auto;
+
+}
+
+
+nav {
+    grid-area: navContainer;
+    margin: 0;
+    padding: 0;
+}
+
+ul#navBar {
+    list-style-type: none;
+    /*removes the dots*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    grid-area: navBar;
+    width: 1062px;
+
+
+    margin: 0 auto;
+
+}
+
+
+
+
+
+
+
+
+li {
+    width: 25%;
+    float: left;
+}
+
+.topIcon {
+    width: 10%;
+}
+
+.mainBar2 {
+    width: 25%;
+}
+
+.mainBar1 {
+    width: 12.5%;
+}
+
+.icons2 {
+    width: 50%;
+}
+
+.icons1 {
+    width: 60%;
+}
+
+.settings,
+.messages {
+    width: 10%;
+}
+
+li a {
+    background-color: #111;
+    display: block;
+    text-align: center;
+    padding: 3px;
+    text-decoration: none;
+}
+
+.leftLine {
+    color: white;
+    border-left-style: solid;
+    padding: 10px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #EA5045;
+    color: white;
+}
+
+.blueLine {
+    background-color: black;
+    height: 10px;
+    margin: 0;
+    grid-area: blueLine;
+}
+
+.main1 {
+    height: 1500px;
+    width: 1062px;
+    grid-area: mainArea;
+    margin: 0 auto;
+    position: relative;
+
+    margin-top: 10%;
+}
+
+
+#mainDiv {
+    width: 1062px;
+    grid-area: mainDiv;
+    background-color: white;
+    margin: 0 auto;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    grid-area: foot;
+    background-color: lightgray;
+}
+
+
+/*MAIN PAGE----------------------------------------------------------------------------*/
+
+.news {
+    grid-area: news;
+
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+        "newsImage newsText";
+    grid-gap: 0;
+}
+
+.newsImage {
+    grid-area: newsImage;
+}
+
+.newsText {
+    grid-area: newsText;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+
+/*SCHEDULE PAGE----------------------------------------------------------------------------*/
+
+
+.day {
+    grid-area: day;
+
+    display: grid;
+    grid-column: 1fr 1fr 1fr;
+    grid-template-areas:
+        "arrowLeft dayText arrowRight";
+    grid-gap: 0px;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#dayText {
+    grid-area: dayText;
+}
+
+#arrowLeft {
+    grid-area: arrowLeft;
+    margin: 10px;
+}
+
+#arrowRight {
+    grid-area: arrowRight;
+    margin: 10px;
+}
+
+.schedule {
+    grid-area: schedule;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+/*PROFILE PAGE----------------------------------------------------------------------------*/
+#profileForm {
+    width: 50%;
+    font-size: 20px;
+    line-height: 0px;
+    text-align: left;
+    margin: auto;
+
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas:
+        "emailP profile1"
+        "numberP profile2";
+
+    grid-row-gap:20px;
+
+}
+
+input.profile1,
+input.profile2{
+    width: auto;
+
+    font-size: 15px;
+}
+
+#numberP{
+    grid-area: numberP;
+    text-align: left;
+}
+
+#emailP{
+    grid-area: emailP;
+    text-align: left;
+}
+
+.profile1{
+    grid-area: profile1;
+}
+
+.profile2{
+    grid-area: profile2;
+}
+
+#analytics{
+    width: 70%;
+    height: 10vh;
+    text-align: center;
+    background-color: #EA5045;
+    color: white;
+    margin: auto;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+/*MATERIAL PAGE----------------------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+@media all and (max-width:1062px) {
+
+    .main1,
+    ul#navBar,
+    #headSpace,
+    #mainDiv {
+        width: 100%;
+    }
+
+}
+
+
+@media all and (max-width:600px) {
+    body {
+        background-color: yellow;
+    }
+}
