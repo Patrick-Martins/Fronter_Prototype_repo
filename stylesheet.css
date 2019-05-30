@@ -16,13 +16,16 @@ div {
     text-align: center;
 }
 
-p,a{
+p,
+a,
+h1,
+h2{
     text-align: center;
     font-family: Helvetica Neue, sans-serif;
 }
 
-p:hover{
-    cursor:default;
+p:hover {
+    cursor: default;
 }
 
 
@@ -133,13 +136,15 @@ li a:hover {
 }
 
 .main1 {
-    height: 3000px;
+    height: auto;
     width: 1080px;
     grid-area: mainArea;
     margin: 0 auto;
     position: relative;
 
     margin-top: 10%;
+
+    margin-bottom: 150px;
 }
 
 
@@ -162,7 +167,7 @@ footer {
 
 /*MAIN PAGE----------------------------------------------------------------------------*/
 
-.pinnedItems{
+.pinnedItems {
     margin: 30px;
     display: grid;
     grid-column: 1fr 1fr;
@@ -178,7 +183,7 @@ footer {
 
 #pinned1,
 #pinned2,
-#pinned3{
+#pinned3 {
     background-color: #EA5045;
     width: 90%;
     height: 100%;
@@ -189,15 +194,15 @@ footer {
 
 }
 
-#pinned1{
+#pinned1 {
     grid-area: pinned1;
 }
 
-#pinned2{
+#pinned2 {
     grid-area: pinned2;
 }
 
-#pinned3{
+#pinned3 {
     grid-area: pinned3;
 }
 
@@ -234,11 +239,9 @@ footer {
     justify-content: center;
 }
 
-#newsDrone{
+#newsDrone {}
 
-}
-
-.droneNews{
+.droneNews {
     display: grid;
     grid-column: 1fr;
     grid-template-areas:
@@ -254,27 +257,27 @@ footer {
     font-size: 25px;
 }
 
-#headliner{
+#headliner {
     width: 100%;
     height: auto;
     background-color: black;
     color: white;
 }
 
-.droneHeadline{
-    grid-area:  droneText;
+.droneHeadline {
+    grid-area: droneText;
     text-align: center;
     padding: 20px;
 }
 
-.droneImage{
+.droneImage {
     grid-area: droneImage;
     margin: auto;
     width: 100%;
 }
 
-.droneText{
-    grid-area:  droneText;
+.droneText {
+    grid-area: droneText;
     text-align: left;
     padding: 10px;
 }
@@ -471,11 +474,17 @@ input.profile2 {
 }
 
 #submissions {
-    width: 50%;
+    width: 70%;
     margin: auto;
 
     line-height: 10px;
     font-size: 20px;
+
+    background-color: darkgray;
+    padding: 20px;
+    text-align: center;
+
+    padding-left: 80px;
 
 }
 
@@ -576,11 +585,11 @@ input.profile2 {
     border-width: 5px;
 }
 
-.approved{
+.approved {
     color: green;
 }
 
-.notDelivered{
+.notDelivered {
     color: red;
 }
 
@@ -677,6 +686,46 @@ input.profile2 {
 
 /*-----------------------------------------------------------------------------------------*/
 
+/*MESSAGES---------------------------------------------------------------------------*/
+
+.message {
+    width: 100%;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+#settingsHeader{
+
+}
+
+.Settings{
+    width: 50%;
+    height: 10vh;
+    text-align: center;
+    background-color: darkgray;
+    margin: auto;
+    margin-bottom: 10px;
+
+    font-size: 25px;
+    font-weight: 500;
+
+    display: grid;
+    grid-column: 1fr;
+    grid-template-areas:
+        "settingsText";
+    grid-gap: 0px;
+
+
+}
+
+.settingsText{
+    grid-area: settingsText;
+}
+
+
+
+
+
 @media all and (max-width:1080px) {
 
     .main1,
@@ -688,14 +737,6 @@ input.profile2 {
     }
 
 }
-
-
-@media all and (max-width:600px) {
-    body {
-        background-color: yellow;
-    }
-}
-
 @media (min-width:1080px) {
 
     body {
@@ -714,24 +755,24 @@ input.profile2 {
 
         display: block;
         margin-top: 10px;
-        margin:auto;
+        margin: auto;
         width: 100%;
 
-
-        /*
-        width: auto;
-        margin:auto;
-*/
     }
 
     .icons1 {
         width: 60px;
     }
 
-    .news {
-        width: 60vw;
+    /*RESPONSIVE----------------------------------------------------------------------------*/
+
+    #mainDiv{
+        margin: auto;
+        width: 90%;
     }
 
+
+    /*------------------------------------------------------------------------------------------*/
     a {
         margin-top: 20px;
     }
@@ -751,21 +792,6 @@ input.profile2 {
 
         position: absolute;
         top: 50%;
-
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        /*
-        margin: 0;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        padding: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: #f1f1f1;
-        position: relative;
-        overflow: auto;
-*/
     }
 
     #sideBar a {
@@ -777,7 +803,7 @@ input.profile2 {
 
     }
 
-    #sideBar a#letters:hover{
+    #sideBar a#letters:hover {
         background-color: #EA5045;
         animation: high 2s forwards;
         transform: scale(2) skewX(5deg) translateX(30px);
@@ -792,7 +818,7 @@ input.profile2 {
         height: 100vh;
     }
 
-    footer{
+    footer {
         grid-area: allFooter;
     }
 
