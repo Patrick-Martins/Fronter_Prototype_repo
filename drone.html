@@ -5,29 +5,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
-    <script src="feed.js" defer></script>
+    <script src="script.js" defer></script>
     <title>Web Prototype</title>
 </head>
 
 <body>
     <header>
+
+        <div id="sideBar">
+            <a href="profile.html"><img class="icons1" alt="Profile" width="0" src="Images/Icons/messages-01.png"></a>
+            <img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png">
+            <a id="letters" href="index.html">HOME</a>
+            <a id="letters" href="material1.html">MATERIAL</a>
+            <a id="letters" href="schedule.html">SCHEDULE</a>
+            <a id="letters" href="profile.html">PROFILE</a>
+            <img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png">
+            <img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png">
+            <a href="index.html"><img class="icons1" alt="Home" width="0" src="Images/Icons/settings.png"></a>
+        </div>
+
+
         <nav>
-
-          <div id="sideBar">
-               <a href="profile.html"><img class="icons1" alt="Profile" width="0" src="Images/Icons/messages-01.png"></a>
-               <img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png">
-               <a id="letters" href="index.html">HOME</a>
-               <a id="letters" href="material1.html">MATERIAL</a>
-               <a id="letters" href="schedule.html">SCHEDULE</a>
-               <a id="letters" href="profile.html">PROFILE</a>
-               <img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png">
-               <img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png">
-               <a href="index.html"><img class="icons1" alt="Home" width="0" src="Images/Icons/settings.png"></a>
-           </div>
-
-
-
-
             <ul id="navBar1">
                 <li class="mainBar1"><a href="index.html"><img class="icons1" alt="Home" width="0" src="Images/Icons/settings.png"></a></li>
                 <li class="mainBar1"><img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png"></li>
@@ -41,34 +39,21 @@
         </nav>
     </header>
 
-    <div class="main1" id="mainBody">
+    <div class="main1">
 
         <div id="mainDiv">
-            <div class="title2">
-                <h1 id="materialHeader">01.01:CONTENT FIRST</h1>
-                <img id="arrowBottom" alt="Arrow" width="10" src="Images/Arrows/LeftArrow-01.png">
-            </div>
 
-            <div class="container">
-                <div class="Themesfeedback">
-                    <p class="themesText">01.01.01: MOOD BOARD</p>
+            <div class="droneNews"><img class="droneImage" alt="Home" width="200" src="Images/News/news2.jpg">
+                <div id="headliner">
+                    <p class="droneHeadline">NEW DRONES AVAILABLE AT TECH LOUNGE FROM 23/5</p>
                 </div>
-                <div class="feedbackText">
-                    <p class="text">STATUS: <span class="approved">APPROVED</span></p>
-                    <p class="text">COMMENTS: <span class="comments">NICE WORK, MESSAGE IS CLEAR AND UNDERSTANDABLE, KEEP IT UP! </span></p>
-                </div>
+                <p class="droneText">New DJI Mavic Pro drones available in Tech Lounge at Lygten 16.
+                    The DJI Mavic Pro is a small yet powerful drone that turns the sky into your creative canvas easily and without worry,
+                    helping you make every moment an aerial moment. Its compact size hides a high degree of complexity that makes it one of DJI’s most
+                    sophisticated flying cameras ever. 24 high-performance computing cores, an all-new transmission system with a 4.3mi (7km) *range,
+                    5 vision sensors, and a 4K camera stabilized by a 3-axis mechanical gimbal, are at your command
+                    with just a push of your thumb or a tap of your finger.</p>
             </div>
-
-            <div class="container">
-                <div class="Themesfeedback">
-                    <p class="themesText">01.01.02: PROJECT DOCUMENT</p>
-                </div>
-                <div class="feedbackText">
-                    <p class="text">STATUS: <span class="notDelivered">NOT DELIVERED</span></p>
-                    <p class="text">COMMENTS: <span class="comments"><i>No comments</i></span></p>
-                </div>
-            </div>
-
         </div>
     </div>
 
@@ -89,4 +74,3 @@
 </body>
 
 </html>
-

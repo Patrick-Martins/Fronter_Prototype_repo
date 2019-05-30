@@ -16,8 +16,13 @@ div {
     text-align: center;
 }
 
-p {
+p,a{
     text-align: center;
+    font-family: Helvetica Neue, sans-serif;
+}
+
+p:hover{
+    cursor:default;
 }
 
 
@@ -28,14 +33,14 @@ header {
     position: fixed;
     top: 0;
     grid-area: headerArea;
-    background-color: gray;
+    background-color: black;
     margin: 0;
     padding: 0;
 }
 
 #headSpace {
     grid-area: headSpace;
-    width: 1062px;
+    width: 1080px;
     margin: 0 auto;
 
 }
@@ -47,7 +52,8 @@ nav {
     padding: 0;
 }
 
-ul#navBar {
+ul#navBar1,
+ul#navBar2 {
     list-style-type: none;
     /*removes the dots*/
     margin: 0;
@@ -55,22 +61,22 @@ ul#navBar {
     overflow: hidden;
     background-color: #111;
     grid-area: navBar;
-    width: 1062px;
+    width: 1080px;
 
 
     margin: 0 auto;
 
 }
 
-
-
+#sideBar {
+    display: none;
+}
 
 
 
 
 
 li {
-    width: 25%;
     float: left;
 }
 
@@ -128,7 +134,7 @@ li a:hover {
 
 .main1 {
     height: 3000px;
-    width: 1062px;
+    width: 1080px;
     grid-area: mainArea;
     margin: 0 auto;
     position: relative;
@@ -138,7 +144,7 @@ li a:hover {
 
 
 #mainDiv {
-    width: 1062px;
+    width: 1080px;
     grid-area: mainDiv;
     background-color: white;
     margin: 0 auto;
@@ -155,6 +161,47 @@ footer {
 
 
 /*MAIN PAGE----------------------------------------------------------------------------*/
+
+.pinnedItems{
+    margin: 30px;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-rows: 70px 70px;
+    grid-template-areas:
+        "pinned1 pinned2"
+        "pinned3 .";
+    grid-gap: 10px;
+
+    align-content: center;
+
+}
+
+#pinned1,
+#pinned2,
+#pinned3{
+    background-color: #EA5045;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+
+}
+
+#pinned1{
+    grid-area: pinned1;
+}
+
+#pinned2{
+    grid-area: pinned2;
+}
+
+#pinned3{
+    grid-area: pinned3;
+}
+
+
 
 .news {
     grid-area: news;
@@ -185,6 +232,51 @@ footer {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+#newsDrone{
+
+}
+
+.droneNews{
+    display: grid;
+    grid-column: 1fr;
+    grid-template-areas:
+        "droneImage"
+        "headliner"
+        "droneText";
+    grid-gap: 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkgray;
+    width: 80%;
+    margin: auto;
+    font-size: 25px;
+}
+
+#headliner{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+}
+
+.droneHeadline{
+    grid-area:  droneText;
+    text-align: center;
+    padding: 20px;
+}
+
+.droneImage{
+    grid-area: droneImage;
+    margin: auto;
+    width: 100%;
+}
+
+.droneText{
+    grid-area:  droneText;
+    text-align: left;
+    padding: 10px;
 }
 
 #indexMainHeader {
@@ -412,10 +504,12 @@ input.profile2 {
     grid-column: 1fr 1fr;
     grid-template-areas:
         "materialHeader arrowBottom";
-    grid-gap: 0px;
+    grid-gap: 20px;
 
     align-items: center;
     justify-content: center;
+
+    margin-bottom: 35px;
 }
 
 .title2 {
@@ -436,12 +530,14 @@ input.profile2 {
 #arrowBottom {
     grid-area: arrowBottom;
     margin: 10px;
+    width: 30px;
 }
 
 #submissionMat {
     width: 95%;
     background-color: black;
     color: white;
+    margin-bottom: 40px;
 
 }
 
@@ -474,10 +570,18 @@ input.profile2 {
 #highlight1,
 #highlight2,
 #highlight3,
-#highlight4{
+#highlight4 {
     border-style: solid;
     border-color: black;
     border-width: 5px;
+}
+
+.approved{
+    color: green;
+}
+
+.notDelivered{
+    color: red;
 }
 
 /*UPLOAD----------------------*/
@@ -573,10 +677,11 @@ input.profile2 {
 
 /*-----------------------------------------------------------------------------------------*/
 
-@media all and (max-width:1062px) {
+@media all and (max-width:1080px) {
 
     .main1,
-    ul#navBar,
+    ul#navBar1,
+    ul#navBar2,
     #headSpace,
     #mainDiv {
         width: 100%;
@@ -589,4 +694,106 @@ input.profile2 {
     body {
         background-color: yellow;
     }
+}
+
+@media (min-width:1080px) {
+
+    body {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-template-areas:
+            "AllHeader main1"
+            "AllHeader allFooter";
+        grid-gap: 0;
+
+
+    }
+
+    .main1 {
+        grid-area: main1;
+
+        display: block;
+        margin-top: 10px;
+        margin:auto;
+        width: 100%;
+
+
+        /*
+        width: auto;
+        margin:auto;
+*/
+    }
+
+    .icons1 {
+        width: 60px;
+    }
+
+    .news {
+        width: 60vw;
+    }
+
+    a {
+        margin-top: 20px;
+    }
+
+
+    #navBar2,
+    #navBar1 {
+        display: none;
+    }
+
+    #sideBar {
+        display: block;
+        display: contents;
+
+        margin-top: auto;
+        margin-bottom: auto;
+
+        position: absolute;
+        top: 50%;
+
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        /*
+        margin: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #f1f1f1;
+        position: relative;
+        overflow: auto;
+*/
+    }
+
+    #sideBar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+
+
+    }
+
+    #sideBar a#letters:hover{
+        background-color: #EA5045;
+        animation: high 2s forwards;
+        transform: scale(2) skewX(5deg) translateX(30px);
+    }
+
+    div {}
+
+    header {
+        grid-area: AllHeader;
+
+        width: 150px;
+        height: 100vh;
+    }
+
+    footer{
+        grid-area: allFooter;
+    }
+
 }

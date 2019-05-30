@@ -1,7 +1,12 @@
 const basicWeb = document.getElementById("highlight1");
+const submissions = document.getElementById("submissionMat");
 
 basicWeb.addEventListener('click', function (){
     window.location.href = 'material2.html';
+});
+
+submissions.addEventListener('click', function (){
+    window.location.href = 'material_upload.html';
 });
 
 
