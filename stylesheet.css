@@ -187,7 +187,7 @@ footer {
     justify-content: center;
 }
 
-#indexMainHeader{
+#indexMainHeader {
     grid-area: indexMainHeader;
 
     display: grid;
@@ -201,7 +201,7 @@ footer {
     text-align: center;
 }
 
-#mainHeaderDiv{
+#mainHeaderDiv {
     width: 95%;
 
     display: grid;
@@ -215,11 +215,11 @@ footer {
     text-align: center;
 }
 
-#todayHeader{
-   grid-area:  todayHeader;
+#todayHeader {
+    grid-area: todayHeader;
 }
 
-#filter{
+#filter {
     grid-area: filter;
     text-align: right;
 }
@@ -407,7 +407,7 @@ input.profile2 {
 
 /*MATERIAL PAGE----------------------------------------------------------------------------*/
 
-.title1{
+.title1 {
     display: grid;
     grid-column: 1fr 1fr;
     grid-template-areas:
@@ -418,7 +418,7 @@ input.profile2 {
     justify-content: center;
 }
 
-.title2{
+.title2 {
     display: grid;
     grid-column: 1fr 1fr;
     grid-template-areas:
@@ -429,23 +429,23 @@ input.profile2 {
     justify-content: center;
 }
 
-#materialHeader{
+#materialHeader {
     grid-area: materialHeader;
 }
 
-#arrowBottom{
+#arrowBottom {
     grid-area: arrowBottom;
-    margin:10px;
+    margin: 10px;
 }
 
-#submissionMat{
+#submissionMat {
     width: 95%;
     background-color: black;
     color: white;
 
 }
 
-.Themes{
+.Themes {
     width: 85%;
     height: 10vh;
     text-align: center;
@@ -467,14 +467,107 @@ input.profile2 {
     justify-content: center;
 }
 
-.themesText{
+.themesText {
     grid-area: themesText;
 }
 
-#basicWEB{
+#highlight1,
+#highlight2,
+#highlight3,
+#highlight4{
     border-style: solid;
     border-color: black;
     border-width: 5px;
+}
+
+/*UPLOAD----------------------*/
+
+#upload_plus {
+    width: 40%;
+}
+
+.uploadText {
+    grid-area: uploadText;
+    margin: 0 auto;
+    font-weight: 700;
+}
+
+.upload {
+    width: 70%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    margin: auto;
+    margin-top: 20%;
+    margin-bottom: 10px;
+
+    font-size: 50px;
+    font-weight: 50;
+
+    display: grid;
+    grid-column: 1fr;
+    grid-template-areas:
+        "uploadText";
+    grid-gap: 0px;
+
+    align-items: center;
+}
+
+.cancelText {
+    font-weight: bold;
+    font-size: 30px;
+    color: #EA5045;
+}
+
+.feedbackText {
+    grid-area: feedbackText;
+    width: 85%;
+
+    text-align: left;
+    background-color: lightgray;
+    margin: auto;
+    margin-bottom: 10px;
+
+
+    font-weight: 50;
+
+
+}
+
+.text {
+    text-align: left;
+    margin: 30px;
+}
+
+.comments {
+    color: gray;
+    ;
+}
+
+.Themesfeedback {
+    grid-area: Themesfeedback;
+
+    width: 85%;
+    height: 10vh;
+    text-align: center;
+    background-color: #EA5045;
+    color: white;
+    margin: auto;
+
+    font-size: 30px;
+    font-weight: 50;
+
+}
+
+.container {
+    display: grid;
+    grid-column: 1fr;
+    grid-template-areas:
+        "Themesfeedback"
+        "feedbackText";
+    grid-gap: 0px;
+
+    margin-bottom: 20px;
 }
 
 
