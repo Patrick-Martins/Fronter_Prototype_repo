@@ -19,7 +19,7 @@ div {
 p,
 a,
 h1,
-h2{
+h2 {
     text-align: center;
     font-family: Helvetica Neue, sans-serif;
 }
@@ -694,11 +694,9 @@ input.profile2 {
 
 /*-----------------------------------------------------------------------------------------*/
 
-#settingsHeader{
+#settingsHeader {}
 
-}
-
-.Settings{
+.Settings {
     width: 50%;
     height: 10vh;
     text-align: center;
@@ -718,12 +716,120 @@ input.profile2 {
 
 }
 
-.settingsText{
+.settingsText {
     grid-area: settingsText;
 }
 
 
+@media all and (max-width:400px) {
+    p {
+        font-size: .7em;
+    }
 
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    #materialHeader {
+        font-size: 1.5em;
+    }
+
+    .themesText,
+    .settingsText {
+        font-size: .6em;
+    }
+
+    .statText {
+        font-size: 1em;
+    }
+
+    .subText,
+    .subNumber {
+        font-size: .7em;
+    }
+
+    #submissions {
+        width: 100%;
+        margin-left: 10px;
+        text-align: left;
+
+        line-height: 10px;
+        font-size: 20px;
+
+    }
+
+    #numberP,
+    #emailP {
+        font-size: .5em;
+    }
+
+
+}
+
+
+@media all and (max-width:660px) {
+
+    p {
+        font-size: .8em;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .news {
+        grid-area: news;
+
+        display: grid;
+        grid-column: 1fr 1fr;
+        grid-template-areas:
+            "newsImage"
+            "newsText";
+        grid-gap: 0;
+
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: gainsboro;
+    }
+
+    .newsImage {
+        width: 100%;
+    }
+
+    .newsText {
+        font-weight: 600;
+        font-size: 1em;
+    }
+
+    .mainDiv,
+    .main1 {
+        width: 100%;
+    }
+
+    #numberP,
+    #emailP {
+        font-size: .8em;
+    }
+
+
+    #profileForm {
+        width: 100%;
+        padding: 20px;
+        font-size: 1.2em;
+    }
+
+}
 
 
 @media all and (max-width:1080px) {
@@ -737,6 +843,7 @@ input.profile2 {
     }
 
 }
+
 @media (min-width:1080px) {
 
     body {
@@ -767,7 +874,7 @@ input.profile2 {
 
     /*RESPONSIVE----------------------------------------------------------------------------*/
 
-    #mainDiv{
+    #mainDiv {
         margin: auto;
         width: 90%;
     }
