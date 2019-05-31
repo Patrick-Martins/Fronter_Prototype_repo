@@ -144,7 +144,7 @@ li a:hover {
 
     margin-top: 10%;
 
-    margin-bottom: 150px;
+    margin-bottom: 180px;
 }
 
 
@@ -756,6 +756,7 @@ input.profile2 {
         display: block;
         margin-top: 10px;
         margin: auto;
+        padding-bottom: 30px;
         width: 100%;
 
     }

@@ -4,92 +4,165 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
     <script src="mainPage.js" defer></script>
     <title>Web Prototype</title>
 </head>
 
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    body,
+    h1 {
+        font-family: Helvetica Neue, sans-serif;
+    }
+
+    h1 {
+        color: white;
+        display: block;
+        margin: auto;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+
+    #logo {
+        margin: auto;
+        width: 50%;
+    }
+
+
+
+
+    .main1 {
+        margin-top: 20vh;
+    }
+
+    #loginFormSection {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: #EA5045;
+        animation: rotat 1s forwards;
+        transform-origin: top;
+    }
+
+    @keyframes rotat {
+        0% {
+            transform: rotateX(90deg);
+        }
+
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+
+    @keyframes borderLight {
+        50% {
+            border-top-width: 10px;
+        }
+        100% {
+            border-top-width: 0px;
+        }
+    }
+
+    input {
+        display: block;
+        margin-bottom: .5em;
+        font-weight: normal;
+        font-size: 15px;
+    }
+
+    input[type="submit"] {
+        margin: 0;
+        width: 100%;
+        margin-top: 1em;
+        background-color: black;
+        color: white;
+        padding: 1em;
+        border: none;
+    }
+
+    input[value="SIGN IN"] {
+        font-weight: bold;
+        font-family: Helvetica Neue, sans-serif;
+        font-size: 20px;
+    }
+
+    p {
+        display: block;
+        text-align: left;
+        color: white;
+        margin: auto;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 80%;
+        height: 40px;
+        font-size: 15px;
+        margin: auto;
+    }
+
+    .mainDiv {
+        margin: 1em;
+    }
+
+    .submitDiv {
+        background-color: black;
+        transform: rotateX(90deg);
+        animation: rotat 1s 1s forwards, borderLight 2s 2s ease-in-out infinite;
+        transform-origin: top;
+        border-style: solid;
+        border-width: 0px;
+        border-color: white;
+    }
+
+    @media (min-width:1080px) {
+        #loginFormSection {
+            width: 50%;
+        }
+    }
+</style>
+
+
 <body>
     <header>
-
-        <div id="sideBar">
-            <a href="messages.html"><img class="icons1" alt="Profile" width="0" src="Images/Icons/messages-01.png"></a>
-            <img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png">
-            <a id="letters" href="index.html">HOME</a>
-            <a id="letters" href="material1.html">MATERIAL</a>
-            <a id="letters" href="schedule.html">SCHEDULE</a>
-            <a id="letters" href="profile.html">PROFILE</a>
-            <img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png">
-            <img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png">
-            <a href="settings.html"><img class="icons1" alt="Home" width="0" src="Images/Icons/settings.png"></a>
-        </div>
-
-
-        <nav>
-            <ul id="navBar1">
-                <li class="mainBar1"><a href="settings.html"><img class="icons1" alt="Home" width="0" src="Images/Icons/settings.png"></a></li>
-                <li class="mainBar1"><img class="icons1" alt="Material" width="0" src="Images/Icons/empty-01.png"></li>
-                <li class="mainBar1"><img class="icons1" alt="Schedule" width="0" src="Images/Icons/empty-01.png"></li>
-                <li class="mainBar1"><img class="icons1" alt="Schedule" width="0" src="Images/Icons/empty-01.png"></li>
-                <li class="mainBar1"><img class="icons1" alt="Schedule" width="0" src="Images/Icons/empty-01.png"></li>
-                <li class="mainBar1"><img class="icons1" alt="Schedule" width="0" src="Images/Icons/empty-01.png"></li>
-                <li class="mainBar1"><img class="icons1" alt="Schedule" width="0" src="Images/Icons/empty-01.png"></li>
-                <li class="mainBar1"><a href="messages.html"><img class="icons1" alt="Profile" width="0" src="Images/Icons/messages-01.png"></a></li>
-            </ul>
-        </nav>
     </header>
 
     <div class="main1">
 
         <div id="mainDiv">
 
-            <h1 id="todayHeader">PINNED</h1>
-            <div class="pinnedItems">
-                <div id="pinned1"><p>SUBMISSIONS</p></div>
-                <div id="pinned2"><p>ANALYTICS</p></div>
-                <div id="pinned3"><p>CONTENT FIRST</p></div>
-            </div>
+            <form id="loginFormSection" action="home.html">
 
+                <img id="logo" alt="Home" width="10" src="Images/KEA_logo.jpg">
 
-            <div id="mainHeaderDiv">
-                <div id="indexMainHeader">
-                    <h1 id="todayHeader">TODAY</h1>
-                    <img id="arrowBottom" alt="Arrow" width="10" src="Images/Arrows/BottomArrow-01.png">
+                <h1>FRONTER</h1>
+
+                <div class="mainDiv">
+                    <p>NAME</p>
+                    <input type="text" placeholder="Name" id="name">
+                    <p>PASSWORD</p>
+                    <input type="password" placeholder="Password" id="pass">
                 </div>
-                <p id="filter">FILTER+</p>
-            </div>
-            <div class="news"><img class="newsImage" alt="Home" width="200" src="Images/News/news1.jpg">
-                <p class="newsText">FRIDAY BAR AT LYGTEN 16 MOVED TO THURSDAY 16/5 DUE TO GREAT PRAYER DAY ON FRIDAY</p>
-            </div>
-            <div class="news" id="newsDrone"><img class="newsImage" alt="Home" width="200" src="Images/News/news2.jpg">
-                <p class="newsText">NEW DRONES AVAILABLE AT TECH LOUNGE FROM 23/5</p>
-            </div>
-            <div class="news"><img class="newsImage" alt="Home" width="200" src="Images/News/news3.jpg">
-                <p class="newsText">EXAMS ARE COMING UP, REMEMBER THAT THERE ARE TUTORS AVAILABLE IN THE CANTEEN…</p>
-            </div>
-            <div class="news"><img class="newsImage" alt="Home" width="200" src="Images/News/news4.jpg">
-                <p class="newsText">MATERIAL LAB IS RECEIVING MORE THAN 500 NEW MATERIAL SAMPLES </p>
-            </div>
-            <div class="news"><img class="newsImage" alt="Home" width="200" src="Images/News/news5.jpg">
-                <p class="newsText">SUMMER IS COMING UP - STAYING IN DENMARK? SEE WHAT IS MUST-SEE IN DENMARK </p>
-            </div>
+                <div class="submitDiv">
+                    <input type="submit" value="SIGN IN" id="submit">
+                </div>
+            </form>
+
 
         </div>
     </div>
 
     <footer>
-
-        <div class="blueLine"></div>
-
-        <nav>
-            <ul id="navBar2">
-                <li class="mainBar2"><a class="leftLine" href="index.html"><img class="icons2" alt="Home" width="0" src="Images/Icons/home-01.png"></a></li>
-                <li class="mainBar2"><a class="leftLine" href="material1.html"><img class="icons2" alt="Material" width="0" src="Images/Icons/pencil-01.png"></a></li>
-                <li class="mainBar2"><a class="leftLine" href="schedule.html"><img class="icons2" alt="Schedule" width="0" src="Images/Icons/schedule-01.png"></a></li>
-                <li class="mainBar2"><a class="leftLine" href="profile.html"><img class="icons2" alt="Profile" width="0" src="Images/Icons/profile-01.png"></a></li>
-            </ul>
-        </nav>
-
     </footer>
 </body>
 
