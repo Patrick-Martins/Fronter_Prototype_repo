@@ -8,13 +8,13 @@ drone.addEventListener('click', function (){
 });
 
 content.addEventListener('click', function (){
-    window.location.href = 'drone.html';
+    window.location.href = 'material3.html';
 });
 analytics.addEventListener('click', function (){
-    window.location.href = 'drone.html';
+    window.location.href = 'analytics.html';
 });
 submissions.addEventListener('click', function (){
-    window.location.href = 'drone.html';
+    window.location.href = 'material_upload.html';
 });
 
 
